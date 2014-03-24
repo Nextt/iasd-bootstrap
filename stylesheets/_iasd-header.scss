@@ -1,0 +1,227 @@
+body > header{
+	background: {
+		color: $theme-main-color;
+		image: image-url($theme-header-background-img);
+		repeat: repeat-x;
+		position: bottom center;
+	}
+	height: 185px;
+	.col-md-5{
+		z-index: 2000;
+	}	
+	.identifier{
+		max-height: 145px;
+		min-height: 145px;
+		overflow: hidden;
+		.brand{
+			display: table;
+			float: left;
+			height: 145px;	
+			margin: 0 50px 0 0;
+			position: relative;
+			a{
+				@include image-2x($theme-logo-retina);
+				background:{
+					image: image-url($theme-logo);
+					position: center center;
+					repeat: no-repeat;
+					size: image-width($theme-logo);
+				}
+				display: table-cell;
+				height: 145px;
+				text-indent: -5000px;
+				width: image-width($theme-logo);
+			}
+			&:after{
+				@include opacity(0.5);
+				background: $body-bg;
+				content: '';
+				display: block;
+				height: 60px;
+				margin: -30px -25px 0 0;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				width: 1px;
+			}
+		}
+		.title{
+			display: table;
+			height: 145px;
+			hgroup{
+				display: table-cell;
+				vertical-align: middle;
+				h1, h2{
+					color: $body-bg;
+					font-family: $font-family-sans-serif;
+					font-style: italic;
+					font-weight: 900;
+					margin: 0;
+				}
+				h1{
+					font-size: 30px;
+					line-height: 32px;
+				}
+				h2{
+					font-size: 15px;
+					line-height: 15px;
+					padding-top: 10px;
+					padding-bottom: 5px;
+					&:empty{
+						padding-top: 0;
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+		&.institutional{
+			.brand{
+				a{
+					@include image-2x("logos_pt_BR/iasd_header@2x.png");
+					background: {
+						image: image-url('logos_pt_BR/iasd_header.png');
+						size: image-width('logos_pt_BR/iasd_header.png');
+					}
+					width: image-width('logos_pt_BR/iasd_header.png');
+				}
+				&:after{
+					display: none;
+				}
+			}
+			.title{
+				h1, h2{
+					display: none;
+				}
+			}
+			&.headquarters{
+				position: relative;
+				.brand{
+					a{
+						background-position: left 30px;
+					}
+				}
+				h2{
+					display: block;
+					position: absolute;
+					left: 78px;
+					top: 80px;
+				}
+			}	
+		}				
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	body > header{
+		.identifier{
+			.brand{
+				display: none;
+			}
+			&.institutional{
+				.brand{
+					margin: 0;
+					display: table;
+				}
+				&.symbol{
+					.brand{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs) {
+	body > header{
+		.identifier{
+			&.institutional{
+				.brand{
+					a{
+						@include image-2x("logos_pt_BR/iasd_header_vertical@2x.png");
+						background:{ 
+							image: image-url('logos_pt_BR/iasd_header_vertical.png');
+							position: left center;
+							size: image-width('logos_pt_BR/iasd_header_vertical.png');
+						}
+						width: image-width('logos_pt_BR/iasd_header_vertical.png');
+					}
+				}
+				&.headquarters{
+					.brand{
+						a{
+							background-position: left 20px;
+						}
+					}
+					h2{
+						@include text-overflow;
+						left: 0;
+						padding: 0 15px 0 105px;
+						top: 100px;
+						width: 100%;
+					}				
+				}
+			}
+			.title{
+				hgroup{
+					h1{
+						font-size: 28px;
+						line-height: 30px;
+					}
+					h2{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* *********************** */
+/*   Internationalization  */
+/* *********************** */
+
+body{
+    &.es_ES{
+		& > header{
+			.identifier{
+				&.institutional{
+					.brand{
+						a{
+							@include image-2x("logos_es_ES/iasd_header@2x.png");
+							background: {
+								image: image-url('logos_es_ES/iasd_header.png');
+								size: image-width('logos_es_ES/iasd_header.png');
+							}
+							width: image-width('logos_es_ES/iasd_header.png');
+						}
+					}
+				}
+			}
+		}
+    }
+}
+
+@media (max-width: $screen-xs) {
+	body{
+		&.es_ES{
+			& > header{
+				.identifier{
+					&.institutional{
+						.brand{
+							a{
+								@include image-2x("logos_es_ES/iasd_header_vertical@2x.png");
+								background:{ 
+									image: image-url('logos_es_ES/iasd_header_vertical.png');
+									position: left center;
+									size: image-width('logos_es_ES/iasd_header_vertical.png');
+								}
+								width: image-width('logos_es_ES/iasd_header_vertical.png');
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

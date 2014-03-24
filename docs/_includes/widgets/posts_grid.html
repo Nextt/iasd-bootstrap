@@ -1,0 +1,52 @@
+<h1>{% if include.title %}{{ include.title }}{% else %}Título do Widget{% endif %}</h1>
+<div class="row">
+	{% for i in include %}
+	{% if i[0] != 'title' %}
+	
+	<div class="post-horizontal-list-item col-md-6 col-sm-6">
+		<a href="#" title="Clique para ler a notícia completa">
+			<h2>{{i[0]}} Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur at diam vel...</h2>
+			<figure>
+				<img src="{% if i[1] != "" %}{{ i[1] }}{% else %}/static/img/widgets/no_image_140x90.png{% endif %}" alt="Título da imagem">
+				<figcaption class="post-taxonomy-tag"><span>Taxonomia</span></figcaption>
+			</figure>
+			<p>Nulla congue lobortis risus, nec consectetur nunc blandit aenean lacinia, metus sed sagittis euismod, nibh dui imperdiet dui</p>
+		</a>
+	</div>
+
+	{% endif %}
+	{% endfor %}
+	
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<a href="#" title="Clique para ver todas as notícias" class="more-link">Mais notícias &raquo;</a>
+	</div>
+</div>
+<div class="config">
+	<a href="#" title="Clique para escolher as informações que sua região" class="toggle-config-link">Escolher</a>
+	<div class="well">
+		<form role="form">
+			<div class="form-group">
+				<label for="selectRegion">Escolher campo:</label>
+				<div class="custom-select">
+					<select id="selectRegion">
+						<optgroup label="Regiões disponíveis">
+							<option selected>Todos</option>
+							<option>Opção de região 01</option>
+							<option>Opção de região 02</option>
+							<option>Opção de região 03</option>
+							<option>Opção de região 04</option>
+							<option>Opção de região 05</option>
+							<option>Opção de região 06</option>
+							<option>Opção de região 07</option>
+							<option>Opção de região 08</option>
+							<option>Opção de região 09</option>
+						</optgroup>
+					</select>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-default">Mostrar notícias</button>
+		</form>
+	</div>
+</div>

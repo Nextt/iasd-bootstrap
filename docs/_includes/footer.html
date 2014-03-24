@@ -1,0 +1,21 @@
+<div class="touch-alert visible-xs">
+	<div class="message">
+		<span class="styleguide-font-awesome-icon">&#xf071;</span>
+		<p>Desculpe-nos, este site não foi otimizado para dispositivos móveis.</p>
+	</div>
+</div>
+
+{% include scripts.html %}
+
+<!-- TODO usar apenas na página de compononentes -->
+
+<script>
+$(document).ready(function() {
+  $("#image-gallery").owlCarousel({
+    autoPlay: 3000,
+    items : 1,
+    pagination : false,
+    itemsScaleUp : true
+  });
+});
+</script> 

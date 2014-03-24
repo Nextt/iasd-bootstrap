@@ -1,0 +1,44 @@
+---
+layout: template
+css: music
+---
+		<div class="container">
+			<div class="row">
+				<div class="iasd-widget iasd-widget-slider col-md-8">
+					{% include widgets/slider_projects.html title="Destaques" img1="/samples/templates/departments_home_music/img/projetos_01.jpg" img2="/samples/templates/departments_home_music/img/projetos_02.jpg" img3="/samples/templates/departments_home_music/img/projetos_03.jpg" %}				
+				</div>
+				<div class="iasd-widget iasd-widget-projects col-md-4">
+					{% include widgets/custom_projects.html %}
+				</div>
+			</div>
+			<div class="row">
+				<div class="iasd-widget iasd-widget-posts_grid col-md-8">
+					{% include widgets/posts_grid.html  title="Últimas Notícias" img1="/samples/templates/departments_home_music/img/ultimas_01.jpg" img2="/samples/templates/departments_home_music/img/ultimas_02.jpg" img3="/samples/templates/departments_home_music/img/ultimas_03.jpg" img4="/samples/templates/departments_home_music/img/ultimas_04.jpg" img5="/samples/templates/departments_home_music/img/ultimas_05.jpg" img6="/samples/templates/departments_home_music/img/ultimas_06.jpg" %}
+				</div>
+				<div class="iasd-widget iasd-widget-posts_list col-md-4">
+					{% include widgets/posts_list_youtube_highlight.html title="Vídeos" img1="http://img.youtube.com/vi/UPGzKOIJ3Jw/0.jpg" img2="http://img.youtube.com/vi/QqAJQtTaLpE/0.jpg" img3="http://img.youtube.com/vi/GLG21dP9nlw/0.jpg" img4="http://img.youtube.com/vi/h8f9biAjIRQ/0.jpg" img5="http://img.youtube.com/vi/UPGzKOIJ3Jw/0.jpg" %}
+				</div>
+			</div>
+			<div class="row">
+				<div class="iasd-widget iasd-widget-posts_box col-md-4">
+					{% include widgets/posts_box_thumbs.html title="Últimas do Blog" img1="/samples/templates/departments_home_music/img/blog_01.jpg" img2="/samples/templates/departments_home_music/img/blog_02.jpg" img3="/samples/templates/departments_home_music/img/blog_03.jpg" img4="/samples/templates/departments_home_music/img/blog_04.jpg" img5="/samples/templates/departments_home_music/img/blog_05.jpg" %}
+				</div>
+				<div class="iasd-widget iasd-widget-posts_box col-md-4">
+					{% include widgets/posts_box_ordered_thumbs.html title="Downloads" img1="/samples/templates/departments_home_music/img/downloads_01.jpg" img2="/samples/templates/departments_home_music/img/downloads_02.jpg" img3="/samples/templates/departments_home_music/img/downloads_03.jpg" img4="/samples/templates/departments_home_music/img/downloads_04.jpg" img5="/samples/templates/departments_home_music/img/downloads_05.jpg" %}
+				</div>
+				<div class="iasd-widget iasd-widget-posts_box col-md-4">
+					{% include widgets/posts_box_events.html title="Próximos Eventos" item1="10/01" item2="23/01" item3="04/02" item4="05/02" item5="16/02"%}
+				</div>
+			</div>			
+			<div class="row">
+				<div class="iasd-widget iasd-widget-find_church col-md-4">
+					{% include widgets/custom_find_church.html %}
+				</div>					
+				<div class="iasd-widget iasd-widget-social_media facebook col-md-4">
+					{% include widgets/custom_social_media_facebook.html %}
+				</div>
+				<div class="iasd-widget iasd-widget-social_media twitter col-md-4">
+					{% include widgets/custom_social_media_twitter.html %}
+				</div>			
+			</div>			
+		</div> <!-- /container -->

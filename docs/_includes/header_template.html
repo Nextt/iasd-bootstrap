@@ -1,0 +1,86 @@
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 identifier {% if page.css == 'association_v1' or page.css == 'association_v2' or page.css == null %}institutional {% unless page.institutional %}headquarters{% endunless %}{% endif %}"> 
+
+			<!-- TODO: Add '.institutinal' to Institutional Pattern | TODO: Add '.institutional' and '.headquarters' to Institutional Headquarters Pattern -->
+				<!-- Institutional Pattern --><!--
+				<div class="brand">
+					<a href="#" title="Clique aqui para retornar à página inicial">Igreja Adventista do Sétimo Dia</a>
+				</div>
+				<div class="title">
+					<hgroup>
+						<h1>Igreja Adventista do Sétimo Dia</h1>
+						<h2></h2>
+					</hgroup>
+				</div>
+				-->
+
+				{% if page.css == 'association_v1' or page.css == 'association_v2' or page.css == null %}
+				<!-- Institutional Headquarters Pattern -->
+				<div class="brand">
+					<a href="#" title="Clique aqui para retornar à página inicial">Igreja Adventista do Sétimo Dia</a>
+				</div>
+				<div class="title">
+					<hgroup>
+						<h1>Igreja Adventista do Sétimo Dia</h1>
+						<h2>{% unless page.institutional %}Associação Paulistana{% endunless %}</h2>
+					</hgroup>
+				</div>
+				{% endif %}
+
+				{% if page.css == 'asn' or page.css == 'afam' or page.css == 'music' %}
+				<!-- Portals Pattern -->
+				<div class="brand">
+					<a href="#" title="Clique aqui para retornar à página inicial">{% if page.css == 'afam' %}AFAM{% endif %}{% if page.css == 'asn' %}Notícias Adventistas{% endif %}{% if page.css == 'music' %}Ministério da Música{% endif %}</a>
+				</div>
+				<div class="title">
+					<hgroup>
+						<h1>{% if page.css == 'afam' %}AFAM{% endif %}{% if page.css == 'asn' %}Notícias Adventistas{% endif %}{% if page.css == 'music' %}Ministério da Música{% endif %}</h1>
+						<h2></h2>
+					</hgroup>
+				</div>
+				{% endif %}
+
+				<!-- Headquarters Portals Pattern --><!--
+				<div class="brand">
+					<a href="#" title="Clique aqui para retornar à página inicial">Materiais e Recursos Adventistas</a>
+				</div>
+				<div class="title">
+					<hgroup>
+						<h1>Materiais e Recursos Adventistas</h1>
+						<h2>Associação Central Sul Rio-Grandense</h2>
+					</hgroup>
+				</div>	
+
+				<!-- Departments Pattern --><!--
+
+				<div class="brand">
+					<a href="#" title="Clique aqui para retornar à página inicial">Ministério da Música</a>
+				</div>
+				<div class="title">
+					<hgroup>
+						<h1>Ministério da Música</h1>
+						<h2></h2>
+					</hgroup>
+				</div>
+
+				<!-- Capa Sedes Departamentos -->
+				<!--
+				<div class="brand">
+					<a href="#" title="Clique aqui para retornar à página inicial">Ministério da Música</a>
+				</div>
+				<div class="title">
+					<hgroup>
+						<h1>Ministério da Música</h1>
+						<h2>(ACSR) Associação Central Sul Rio-Grandense</h2>								
+					</hgroup>
+				</div>
+				-->
+			</div>
+			<div class="col-md-5 visible-md visible-lg">
+				{% include dropdown_nav.html %}<!--  Begin Dropdown Navigation  -->
+			</div>
+		</div>
+	</div>
+</header>

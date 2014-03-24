@@ -1,0 +1,17 @@
+Gemfile.lock
+
+# Ignore docs generated files
+_gh_pages
+_site
+.ruby-version
+.sass-cache
+.bundle
+
+#ignore dist generated files
+dist/
+iasd-bootstrap*.zip
+node_modules/
+
+#Ignore Sublime project files
+IASD Bootstrap.esproj/Project.espressostorage
+IASD Bootstrap.esproj/user.Eduardo.espressostorage

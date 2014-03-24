@@ -1,0 +1,41 @@
+---
+layout: template
+css: association_v1
+---
+		<div class="container">
+			<section class="row entry-content">
+				<article class="col-md-8">
+					<header>
+						<h1 class="iasd-main-title">Blog</h1>
+					</header>
+						<div class="iasd-main-highlight">
+							<a href="#" title="Clique para ler o artigo completo">
+								<figure>
+									<img src="http://placehold.it/720x350/eee9e3/3a3a3a/&amp;text=Imagem de Destaque" alt="Título da Imagem">
+								</figure>
+								<figcaption>
+									<h2><!-- Atentar para número máximo de caracteres -->Phasellus aliquam elit ante, quis consequat...</h2>
+									<p><!-- Atentar para número máximo de caracteres -->Ut elementum tempus nulla, at condimentum tortor venenatis id...</p>
+								</figcaption>
+							</a>
+						</div>
+						<div class="iasd-widget iasd-widget-posts_list iasd-widget-config">
+							{% include widgets/posts_list_youtube_highlight.html  img1="http://img.youtube.com/vi/UPGzKOIJ3Jw/0.jpg" img2="http://img.youtube.com/vi/QqAJQtTaLpE/0.jpg" img3="http://img.youtube.com/vi/GLG21dP9nlw/0.jpg" img4="http://img.youtube.com/vi/h8f9biAjIRQ/0.jpg" %}
+						</div>
+						<div class="iasd-widget iasd-widget-posts_list iasd-widget-config">
+							{% include widgets/posts_list_youtube_highlight.html  img1="http://img.youtube.com/vi/UPGzKOIJ3Jw/0.jpg" img2="http://img.youtube.com/vi/QqAJQtTaLpE/0.jpg" img3="http://img.youtube.com/vi/GLG21dP9nlw/0.jpg" img4="http://img.youtube.com/vi/h8f9biAjIRQ/0.jpg" %}
+						</div>
+				</article>
+				<aside class="iasd-aside col-md-4">
+					<div class="iasd-widget iasd-widget-menu col-sm-8">
+						{% include widgets/custom_text.html %}
+						<div class="alert alert-danger">
+							<strong>Atenção!</strong> O tamanho do Widget selecionado é incompatível com esta Sidebar. Por favor, reveja suas configurações.
+						</div>
+					</div>
+					<div class="iasd-widget iasd-widget-menu">
+						{% include widgets/custom_text.html %}
+					</div>
+				</aside>
+			</section>
+		</div>

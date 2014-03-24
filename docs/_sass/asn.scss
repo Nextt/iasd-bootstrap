@@ -1,0 +1,15 @@
+@import "iasd-variables";
+
+// -------------------------
+// Theme Options
+// -------------------------
+
+$theme-main-color: 					$asn-main-color;							// Header background color, widgets links color, widgets tags, widgtes color highlights
+$theme-alt-color: 					#39733c;										// Widgets headers color
+$theme-main-nav-base-color:			$theme-alt-color;								// Main nav background color base
+$theme-footer-base-color:			$theme-alt-color;							// Footer color base
+$theme-header-background-img:		'../../samples/templates/asn_home/img/asn.png';				// Header background image
+$theme-logo: 						'../../samples/templates/asn_home/img/iasd_header_symbol.png';				// Header logo image
+$theme-logo-retina: 				'../../samples/templates/asn_home/img/iasd_header_symbol@2x.png';			// Header logo retina image resource
+
+@import "iasd-bootstrap";

@@ -1,0 +1,15 @@
+<h1>{% if include.title %}{{ include.title }}{% else %}Título do Widget{% endif %}</h1>
+<div class="owl-carousel posts">
+	{% for i in include %}
+	{% if i[0] != 'title' %}
+	<div class="slider-item">
+		<a href="#" title="Clique para conhecer o projeto">
+			<figure>
+				<img data-src="{% if i[1] != "" %}{{ i[1] }}{% else %}/static/img/widgets/slider_full.png{% endif %}" alt="Título da imagem" class="lazyOwl">
+				<figcaption><h2>Phasellus aliquam elit ante, quis consequat metus laor</h2></figcaption>
+			</figure>
+		</a>
+	</div>
+	{% endif %}
+	{% endfor %}
+</div>

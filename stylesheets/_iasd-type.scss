@@ -1,0 +1,25 @@
+@import "compass/css3";
+
+@include font-face(
+	"Futura Std", 
+	font-files(	
+		"futurastd-medium-webfont.woff", 
+		"futurastd-medium-webfont.ttf", 
+		"futurastd-medium-webfont.svg#futura_std_medium"
+	), 	"futurastd-medium-webfont.eot", 500, normal);
+
+@include font-face(
+	"Futura Std", 
+	font-files(	
+		"futurastd-book-webfont.woff", 
+		"futurastd-book-webfont.ttf", 
+		"futurastd-book-webfont.svg#futura_std_book"
+	), 	"futurastd-book-webfont.eot", 400, normal);
+
+@include font-face(
+	"Futura Std", 
+	font-files(	
+		"futurastd-light-webfont.woff", 
+		"futurastd-light-webfont.ttf", 
+		"futurastd-light-webfont.svg#futura_std_light"
+	), 	"futurastd-light-webfont.eot", 300, normal);

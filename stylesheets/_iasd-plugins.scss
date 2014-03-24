@@ -1,0 +1,76 @@
+// Back link plugin
+// --------------------------------------------------
+
+
+.iasd-plugin-return_page{
+	@include border-radius(0 5px 5px 0);
+	@include transition(.6s ease-in-out left);
+	background: $text-color;
+	background: rgba($text-color, 0.85);
+	display: table;
+	height: 150px;
+	left: 0;
+	margin: -75px 0 0 0;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	width: 180px;
+	z-index: 1000;
+	.page-link{
+		color: $body-bg;
+		display: table-cell;
+		font-size: 16px;
+		font-weight: 900;
+		line-height: 18px;
+		height: 150px;
+		padding: 20px;
+		position: relative;
+		text-align: left;
+		vertical-align: middle;
+		width: 160px;
+		&:before{
+			content: 'Voltar para:';
+			color: $body-bg;
+			display: block;
+			font-size: 12px;
+			font-style: italic;
+			font-weight: 400;
+			height: 20;
+			left: 0;
+			margin: 0 0 5px 0;
+		}		
+	}
+	.toggle-visibility-link{
+		bottom: 0;
+		display: block;
+		position: absolute;
+		right: 0;
+		text-indent: -5000px;
+		top: 0;
+		width: 20px;
+		&:after{
+			background: rgba($text-color, 0.2);
+			content: '\f100';
+			color: $body-bg;
+			display: block;
+			font-family: FontAwesome;
+			font-weight: 400;
+			height: 150px;
+			left: 0;
+			line-height: 150px;
+			position: absolute;
+			text-align: center;
+			text-indent: 0;
+			top: 0;
+			width: 20px;
+		}
+	}
+	&.collapsed{
+		left: -160px;
+		.toggle-visibility-link{
+			&:after{
+				content: '\f101';
+			}
+		}
+	}
+}

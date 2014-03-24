@@ -1,0 +1,21 @@
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/static/lib/iasd-bootstrap.min.js"></script>
+{% comment %} include only on institutional theme... not part of IASD Boostrap {% endcomment %}
+{% if page.institutional %}
+<script src="/static/js/masonry.pkgd.min.js"></script>
+<script src="/static/js/mediaelement-and-player.min.js"></script>
+<script src="/static/js/institutional.js"></script>
+{% endif %}
+
+{% if page.css == 'division' %}
+<script src="/static/js/department_home_dsa.js"></script>
+{% endif %}
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->

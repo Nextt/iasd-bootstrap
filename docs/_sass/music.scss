@@ -1,0 +1,14 @@
+@import "iasd-variables";
+
+// Theme Options
+// -------------------------
+
+$theme-main-color: 					#7b3876;
+$theme-alt-color: 					#38225f;
+$theme-main-nav-base-color:			$theme-main-color;
+$theme-footer-base-color:			$theme-main-color;
+$theme-header-background-img:		'../../samples/templates/departments_home_music/img/musica.jpg';
+$theme-logo: 						'../../samples/templates/departments_home_music/img/iasd_header_logo.png';
+$theme-logo-retina: 				'../../samples/templates/departments_home_music/img/iasd_header_logo@2x.png';	
+
+@import "iasd-bootstrap";

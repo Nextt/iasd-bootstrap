@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		{% include head_template.html %}
+	</head>
+	<body id="{{ page.body_id }}" class="{{ page.body_class }}">
+		{% include ie_alert.html %}
+		{% include global_nav.html %}
+		{% if page.css == 'division' %}
+			{% include header_dsa.html %}
+		{% else %}
+			{% include header_template.html %}
+		{% endif %}
+		{% include main_nav.html %}
+		
+		{{ content }}
+
+		{% if page.return_page %}{% include return_page_plugin.html %}{% endif %}
+		{% include footer_template.html %}
+		{% include scripts.html %}
+	</body>
+</html>

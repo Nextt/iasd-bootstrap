@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include head.html %}
+		<title>{{ page.title }}</title>
+	</head>
+	<body>
+		<header class="styleguide-header">
+			<div class="container">
+				<a href="/" title="Clique aqui para voltar para a página inicial" class="styleguide-header-home-link">Igreja Adventista do Sétimo Dia</a>
+			</div>
+		</header>
+
+		{{ content }}
+
+		<footer class="styleguide-footer">
+			<div class="container">
+				<div>
+					<span class=styleguide-footer-nextt>Desenvolvimento</span>
+					<a href="http://www.nextt.com.br" target=“_blank” title="Clique aqui para visitar o site" class="styleguide-footer-nextt-link"></a>
+				</div>
+				<ul class="styleguide-footer-nav">
+  					<li><a href="#">Créditos</a></li>
+  					<li><a href="#">Contato</a></li>
+				</ul>
+				<a href="http://www.adventistas.org" target=“_blank” title="Clique aqui para visitar o site" class="styleguide-footer-iasd"></a>
+			</div>
+		</footer>
+
+		{% include footer.html %}
+
+	</body>
+</html>		

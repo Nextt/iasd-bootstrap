@@ -1,0 +1,13 @@
+@import "iasd-variables";
+// Theme Options
+// -------------------------
+
+$theme-main-color: 					#cf702f;								// Header background color, widgets links color, widgets tags, widgtes color highlights
+$theme-alt-color: 					#783638;										// Widgets headers color
+$theme-main-nav-base-color:			$theme-alt-color;								// Main nav background color base
+$theme-footer-base-color:			$theme-alt-color;							// Footer color base
+$theme-header-background-img:		'../../samples/templates/departments_home_afam/img/afam.jpg';				// Header background image
+$theme-logo: 						'../../samples/templates/departments_home_afam/img/iasd_header_logo.png';				// Header logo image
+$theme-logo-retina: 				'../../samples/templates/departments_home_afam/img/iasd_header_logo@2x.png';			// Header logo retina image resource
+
+@import "iasd-bootstrap";

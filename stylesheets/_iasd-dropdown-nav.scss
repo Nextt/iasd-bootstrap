@@ -1,0 +1,212 @@
+.iasd-dropdown-navigation{
+	float: right;
+	margin-top: 55px;
+	position: relative;
+	.dropdown-toggle{
+		@include box-sizing(border-box);
+		@include box-shadow(0 1px 2px rgba(0, 0, 0, 0.1), inset 1px 1px 1px rgba(255, 255, 255, 0.5));
+		@include gradient-vertical(lighten($body-bg, 3%), $body-bg);
+		@include border-radius(5px);	
+		border: none;
+		color: $alt-link-color;
+		display: inline-block;
+		height: 35px;
+		float: right;
+		font-weight: 400;
+		line-height: 35px;
+		padding: 0 10px;
+		position: relative;
+		text-align: left;
+		width: 340px;
+		&:after{
+			content: '\f107';
+			display: block;
+			font-family: FontAwesome;
+			font-weight: normal;
+			font-size: 12px;
+			height: 35px;
+			line-height: 35px;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: 35px;
+		}
+	}
+	.dropdown-menu{
+		@include box-shadow(0 5px 10px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.2));
+		@include border-radius(0 0 5px 5px);
+		border: 0;
+		float: right;	
+		left: 5px;
+		margin: 0 5px 0 0;
+		overflow: hidden;
+		position: absolute;
+		padding: 10px 0 5px;
+		width: 330px;
+		ul{
+			display: block;
+			list-style: none;
+			margin: 0;
+			overflow: hidden;
+			padding: 0;
+			width: 330px;
+			li{
+
+				h1{
+					@include text-overflow;
+					color: $alt-text-color;
+					font-size: 13px;
+					font-weight: 900;
+					line-height: 25px;
+					margin: 0;
+				}
+				a{				
+					@include box-sizing(border-box);
+					display: block;
+					color: $alt-text-color;
+					padding: 0 30px;
+					position: relative;
+					h2{
+						@include text-overflow;
+						font-size: 13px;
+						font-weight: 400;	
+						line-height: 25px;
+						margin: 0;
+					}
+					&:after{
+						content: '\f105';
+						display: block;
+						font-family: FontAwesome;
+						font-weight: bold;
+						font-size: 12px;
+						height: 25px;
+						line-height: 25px;
+						position: absolute;
+						right: 0;
+						text-align: center;
+						top: 0;
+						width: 25px;
+					}
+					&.btn, &.btn:hover, &.btn:focus{
+						color: #fff;
+						&:after{
+							display: none;
+						}
+					}
+				}
+				ul{
+					background: #fff;
+					left: 330px;
+					padding: 10px 0 5px;
+					position: absolute;
+					top: 0;
+					&.active{
+						@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1));
+						left: 0;
+						z-index: 1;
+					}
+					li{
+						h3{
+							@include text-overflow;
+							color: $alt-text-color;
+							font-size: 13px;
+							font-weight: 900;
+							line-height: 25px;
+							margin: 0;
+						}
+						a{
+							@include text-overflow;
+							color: $alt-text-color;
+							display: block;
+							height: 25px;
+							line-height: 25px;
+							&:after{
+								display: none;
+							}
+						}
+						&.heading{
+							border-bottom: 1px solid desaturate($border-base, 20%);
+							margin-bottom: 10px;
+							padding: 0 20px 5px;
+							&:hover, &:focus{
+								background: transparent;
+							}
+						}
+					}
+				}
+				&.heading{
+					border-bottom: 1px solid desaturate($border-base, 20%);
+					margin-bottom: 10px;
+					padding: 0 20px 5px;
+					&:hover, &:focus{
+						background: transparent;
+					}
+				}
+				&.back{
+					border-top: 1px solid desaturate($border-base, 20%);
+					margin-top: 10px;
+					padding: 6px 0 0;
+					a{
+						font-weight: 900;
+						&:before{
+							content: '\f053';
+							color: $theme-main-color;
+							display: block;
+							font-family: FontAwesome;
+							font-weight: normal;
+							font-size: 10px;
+							height: 25px;
+							line-height: 25px;
+							position: absolute;
+							left: 5px;
+							text-align: center;
+							top: 0;
+							width: 25px;
+						}
+					}
+					&:hover, &:focus{
+						background: transparent;
+						a{
+							color: $theme-main-color;
+						}
+					}
+				}
+				&.active{
+					a{
+						font-weight: 700;
+						&:before{
+							content: '\f00c';
+							color: $theme-main-color;
+							display: block;
+							font-family: FontAwesome;
+							font-weight: normal;
+							font-size: 12px;
+							height: 25px;
+							line-height: 25px;
+							position: absolute;
+							left: 5px;
+							text-align: center;
+							top: 0;
+							width: 25px;
+						}						
+					}
+				}
+				&.dsa-link{
+					border-top: 1px solid desaturate($border-base, 20%);
+					margin-top: 10px;
+					padding: 10px 10px 5px;
+					&:hover{
+						background: transparent;
+					}
+					.btn-default{
+						padding: 5px 30px;
+					}
+				}
+				&:hover, &:focus{
+					background: shade($body-bg, 5%);
+				}
+			}
+		}
+	}
+}

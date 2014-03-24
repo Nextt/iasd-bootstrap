@@ -1,0 +1,69 @@
+<h1>{% if include.title %}{{ include.title }}{% else %}Título do Widget{% endif %}</h1>
+<div class="row">
+	<div class="highlight-excerpt col-md-6 col-sm-6">
+		<a href="#" title="Clique para ler a notícia completa">
+			<figure style="background-image: url('{% if include.img1 %}{{ include.img1 }}{% else %}/static/img/widgets/no_image_740x475.png{% endif %}');">
+				<img src="{% if include.img1 %}{{ include.img1 }}{% else %}/static/img/widgets/no_image_740x475.png{% endif %}" class="img-responsive" alt="Título da imagem">
+				<figcaption class="post-taxonomy-tag"><span>Taxonomia</span></figcaption>
+			</figure>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</h2>
+			<p>Nulla congue lobortis risus, nec consectetur nunc blandit aenean lacinia, metus sed sagittis euismod, nibh dui imperdiet dui sed at accumsan tellus fusce id tellus accumsan</p>
+		</a>
+	</div>
+	<div class="col-md-6 col-sm-6">
+		<div class="row">
+			<div class="post-horizontal-list-item col-md-12 col-sm-12">
+				<a href="#" title="Clique para ler a notícia completa">
+					<h2>Nulla lobortis velit a libero semper vestibulum nulla lorem tortor</h2>
+					<figure>
+						<img src="{% if include.img2 %}{{ include.img2 }}{% else %}/static/img/widgets/no_image_140x90.png{% endif %}" alt="Título da imagem">
+						<figcaption class="post-taxonomy-tag"><span>Taxonomia</span></figcaption>
+					</figure>
+					<p>Donec ac augue sem, donec vel risus nisi, mauris egestas tortor nulla, at hendrerit odio eleifend ut. Praesent auctor imperdiet</p>
+				</a>
+			</div>			
+			<div class="post-horizontal-list-item col-md-12 col-sm-12">
+				<a href="#" title="Clique para ler a notícia completa">
+					<h2>Quisque vel ligula id ante convallis ultricies non id turpis</h2>
+					<figure>
+						<img src="{% if include.img3 %}{{ include.img3 }}{% else %}/static/img/widgets/no_image_140x90.png{% endif %}" alt="Título da imagem">
+						<figcaption class="post-taxonomy-tag"><span>Taxonomia</span></figcaption>
+					</figure>
+					<p>Proin dictum libero ante, ut adipiscing justo varius nec, suspendisse ut convallis ligula, duis felis mi, eleifend...</p>
+				</a>
+			</div>			
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<a href="#" title="Clique para ver todas as notícias" class="more-link">Mais notícias &raquo;</a>
+	</div>
+</div>
+<div class="config">
+	<a href="#" title="Clique para escolher as informações que sua região" class="toggle-config-link">Escolher</a>
+	<div class="well">
+		<form role="form">
+			<div class="form-group">
+				<label for="selectRegion">Escolher campo:</label>
+				<div class="custom-select">
+					<select id="selectRegion">
+						<optgroup label="Regiões disponíveis">
+							<option selected>Todos</option>
+							<option>Opção de região 01</option>
+							<option>Opção de região 02</option>
+							<option>Opção de região 03</option>
+							<option>Opção de região 04</option>
+							<option>Opção de região 05</option>
+							<option>Opção de região 06</option>
+							<option>Opção de região 07</option>
+							<option>Opção de região 08</option>
+							<option>Opção de região 09</option>
+						</optgroup>
+					</select>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-default">Mostrar notícias</button>
+		</form>
+	</div>
+</div>

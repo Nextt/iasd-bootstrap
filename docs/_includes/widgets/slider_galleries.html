@@ -1,0 +1,28 @@
+<h1>{% if include.title %}{{ include.title }}{% else %}Galeria de fotos{% endif %}</h1>
+<div class="owl-carousel galleries">
+	<div class="slider-item">
+		<a href="#" title="Título da foto completo (sem ellipsis). Clique para ler a matéria completa.">
+			<figure style="background-image: url('{% if include.img1 %}{{ include.img1 }}{% else %}/static/img/widgets/no_image_740x475.png{% endif %}');">
+				<img src="{% if include.img1 %}{{ include.img1 }}{% else %}/static/img/widgets/no_image_740x475.png{% endif %}" class="img-responsive" alt="Título da imagem">
+			</figure>
+			<h2>Phasellus aliquam elit ante, quis consequat metus laor...</h2>
+			<time>20 de Novembro de 2013</time>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a lacinia neque, et hendrerit dolor. Nam sagittis ac augue vitae posuere.</p>
+		</a>
+	</div>
+	<div class="slider-item">
+		<a href="#" title="Título da foto completo (sem ellipsis). Clique para ler a matéria completa.">
+			<figure style="background-image: url('{% if include.img2 %}{{ include.img2 }}{% else %}/static/img/widgets/no_image_740x475.png{% endif %}');">
+				<img src="{% if include.img2 %}{{ include.img2 }}{% else %}/static/img/widgets/no_image_740x475.png{% endif %}" class="img-responsive" alt="Título da imagem">
+			</figure>
+			<h2>Donec fringilla dui nec massa mattis, sed commodo urna...</h2>
+			<time>18 de Novembro de 2013</time>
+			<p>Donec nec lacus ut quam euismod consequat. Donec hendrerit suscipit scelerisque. Duis quis rutrum nisl, eget lacinia odio.</p>
+		</a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<a href="#" title="Clique para ver todas as imagens" class="more-link">Mais imagens &raquo;</a>
+	</div>
+</div>
