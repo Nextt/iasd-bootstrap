@@ -1,0 +1,90 @@
+/* line 3, ../../../stylesheets/iasd-print.scss */
+* {
+  color: #000;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* line 10, ../../../stylesheets/iasd-print.scss */
+h1 {
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0 0 20px 0;
+}
+
+/* line 15, ../../../stylesheets/iasd-print.scss */
+h2 {
+  font-size: 22px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+}
+
+/* line 20, ../../../stylesheets/iasd-print.scss */
+h3 {
+  font-size: 20px;
+  line-height: 22px;
+  margin: 0 0 20px 0;
+}
+
+/* line 25, ../../../stylesheets/iasd-print.scss */
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0 0 20px 0;
+}
+
+/* line 30, ../../../stylesheets/iasd-print.scss */
+h5 {
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0 0 20px 0;
+}
+
+/* line 35, ../../../stylesheets/iasd-print.scss */
+h6 {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 20px 0;
+}
+
+/* line 41, ../../../stylesheets/iasd-print.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 45, ../../../stylesheets/iasd-print.scss */
+body > footer, body > header .brand, .iasd-global_navbar, .iasd-dropdown-navigation, .iasd-main_navbar, .entry-content + aside, .entry-content .sharing-links {
+  display: none;
+}
+
+/* line 49, ../../../stylesheets/iasd-print.scss */
+body > header {
+  border-bottom: 1px solid #000;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+/* line 55, ../../../stylesheets/iasd-print.scss */
+.entry-content {
+  display: block;
+}
+/* line 57, ../../../stylesheets/iasd-print.scss */
+.entry-content hr, .entry-content iframe, .entry-content footer {
+  display: none;
+}
+
+/* line 62, ../../../stylesheets/iasd-print.scss */
+.archive figure {
+  display: none;
+}
+/* line 65, ../../../stylesheets/iasd-print.scss */
+.archive ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 70, ../../../stylesheets/iasd-print.scss */
+.archive aside {
+  display: none;
+}

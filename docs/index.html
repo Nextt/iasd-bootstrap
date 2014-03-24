@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="/static/css/styles.css" rel="stylesheet" media="screen">
+<link href="/static/css/styleguide.css" rel="stylesheet" media="screen">
+<!--[if lt IE 9]>
+	<script src="/static/lib/ltie9.min.js"></script>
+<![endif]-->
+		<title>Guia de estilos das instalações</title>
+	</head>
+	<body>
+		<header class="styleguide-header">
+			<div class="container">
+				<a href="/" title="Clique aqui para voltar para a página inicial" class="styleguide-header-home-link">Igreja Adventista do Sétimo Dia</a>
+			</div>
+		</header>
+
+		<div class="container styleguide">
+			<ol class="breadcrumb">
+				<li><a href="/">Início</a></li>
+				<li class="active">Guia de estilos das instalações</li>
+			</ol>			
+
+		<div class="jumbotron">
+	<h1>Documentos técnicos</h1>
+	<p>Encontre aqui guias de codificação de componentes e instruções de instalação e configuração dentro do ambiente Wordpress.</p>
+</div>
+	<div class="row">
+		<div class="col-md-8 section-ordered-list">
+
+			<section id="intro">
+				<h2>Configuração de ambientes Wordpress</h2>
+				<p>Instruções para a instalação de componentes do IASD Bootstrap em instalações Wordpress.</p>
+				<h3>Abas do componente de navegação global</h3>
+				<p class="lead">Guia para adicionar ítens/abas ao menu "Mais…" da navegação global.</p>
+				<ol>
+					<li>
+						<p>Criar uma nova location para a aba "Manage Locations" do painel de administração da instalação de taxonomias, no arquivo PANavMaster.class.php, no plugin pa-plugin-taxonomias-master, dentro da função "Init". Manter o padrão de nomenclatura, "multisite_abaX", "Global NX Aba X".<br/>Ex. : register_nav_menu('multisite_aba3', __('Global N3 Aba 3 (Serviços)', 'iasd'));</p>
+					</li>
+					<li>
+						<p>Adicionar a location ao array na função "RenderMenus".<br/>Ex. : $menus['multisite_aba3'] = self::RenderJson('multisite_aba3');</p>
+					</li>
+					<li>
+						<p>Criar na aba "Aparência", no sub ítem "Menus", no painel de administração da instalação de taxonomias um novo menu.</p>
+					</li>
+					<li>
+						<p>Assignar o menu criado no ítem anterior na location criada no primeiro ítem.</p>
+					</li>
+				</ol>
+			</section>
+
+		</div>
+		<div class="col-md-4 styleguide table-contents">
+			<!--
+			<h2>Conteúdos</h2>
+			<ul class="table-contents-ordered-list">
+				<li>
+					<a href="#intro" title="Configuração de ambientes Wordpress">Configuração de ambientes Wordpress</a>
+					<ul class="child-ul">
+						<li><a href="#intro-what-is" title="Abas do componente de navegação global">Abas do componente de navegação global</a></li>
+					</ul>
+				</li>
+			</ul>
+			-->
+		</div>			
+	</div>	
+
+		</div>
+
+		<footer class="styleguide-footer">
+			<div class="container">
+				<div>
+					<span class=styleguide-footer-nextt>Desenvolvimento</span>
+					<a href="http://www.nextt.com.br" target=“_blank” title="Clique aqui para visitar o site" class="styleguide-footer-nextt-link"></a>
+				</div>
+				<ul class="styleguide-footer-nav">
+  					<li><a href="#">Créditos</a></li>
+  					<li><a href="#">Contato</a></li>
+				</ul>
+				<a href="http://www.adventistas.org" target=“_blank” title="Clique aqui para visitar o site" class="styleguide-footer-iasd"></a>
+			</div>
+		</footer>
+
+		<div class="touch-alert visible-xs">
+	<div class="message">
+		<span class="styleguide-font-awesome-icon">&#xf071;</span>
+		<p>Desculpe-nos, este site não foi otimizado para dispositivos móveis.</p>
+	</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/static/lib/iasd-bootstrap.min.js"></script>
+
+
+
+
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+
+<!-- TODO usar apenas na página de compononentes -->
+
+<script>
+$(document).ready(function() {
+  $("#image-gallery").owlCarousel({
+    autoPlay: 3000,
+    items : 1,
+    pagination : false,
+    itemsScaleUp : true
+  });
+});
+</script> 
+
+		<script>
+
+			$(function() {
+				$('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+						if (target.length) {
+							$('html,body').animate({
+								scrollTop: target.offset().top - 20
+							}, 1000);
+							return false;
+						}
+					}
+				});
+			});
+			
+		</script>			
+
+	</body>
+</html>		
